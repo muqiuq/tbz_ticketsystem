@@ -1,0 +1,46 @@
+version: '3.7'
+services:
+
+  osticket-app:
+    image: osticket/osticket
+    container_name: osticket-app
+    labels:
+      - traefik.enable=true
+      - traefik.frontend.rule=Host:url.example.com
+      - traefik.port=80
+      - traefik.protocol=http
+      - traefik.docker.network=proxy
+      - traefik.backend=osticket-app
+    volumes:
+      - ./data/:/var/www
+    environment:
+      - MYSQL_HOST=osticket-db
+      - MYSQL_PASSWORD=verysecret1234
+      - MYSQL_USER=osticket
+      - INSTALL_NAME=M437 My Helpdesk
+    networks:
+      - proxy
+      - services
+    restart: always
+    ports:
+      - 8080:80
+
+  osticket-db:
+    image: linuxserver/mariadb
+    container_name: osticket-db
+    volumes:
+      - ./db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASS=securepassword
+      - MYSQL_DATABASE=osticket
+      - MYSQL_USER=osticket
+      - MYSQL_PASSWORD=verysecret1234
+    networks:
+      - services
+    restart: always
+
+networks:
+  proxy:
+    external: true
+  services:
+    external: true

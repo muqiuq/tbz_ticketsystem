@@ -19,14 +19,13 @@ services:
       - MYSQL_USER=osticket
       - INSTALL_NAME=M437 My Helpdesk
     networks:
-      - proxy
       - services
     restart: always
     ports:
       - 8080:80
 
   osticket-db:
-    image: linuxserver/mariadb
+    image: mariadb:10.5-focal
     container_name: osticket-db
     volumes:
       - ./db:/var/lib/mysql

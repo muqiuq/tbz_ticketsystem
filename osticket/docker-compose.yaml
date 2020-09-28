@@ -2,17 +2,8 @@ version: '3.7'
 services:
 
   osticket-app:
-    image: osticket/osticket
+    image: campbellsoftwaresolutions/osticket
     container_name: osticket-app
-    labels:
-      - traefik.enable=true
-      - traefik.frontend.rule=Host:url.example.com
-      - traefik.port=80
-      - traefik.protocol=http
-      - traefik.docker.network=proxy
-      - traefik.backend=osticket-app
-    volumes:
-      - ./data/:/var/www
     environment:
       - MYSQL_HOST=osticket-db
       - MYSQL_PASSWORD=verysecret1234

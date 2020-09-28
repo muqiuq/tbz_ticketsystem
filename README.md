@@ -31,7 +31,7 @@ docker-compose up
  - Wait until docker gets everything ready (can take up to 10 minutes).
  - Use Backend login url to access backend. 
 
-### Tips:
+# Tips:
  - You may have to create a network proxy and service first (you'll receive a warning)
  ```shell
 docker network create proxy
@@ -59,3 +59,8 @@ docker container ls -a
 docker-compose rm
 ```
  - Data persistance is implemented by mounting two folders (data and db) within the current directory (where you ran docker-compose). **Backup this folders!**
+
+# Links
+ - Docker Tutorial For Beginners - https://www.youtube.com/watch?v=rOTqprHv1YE
+ - Learn Docker in 12 Minutes 🐳 - https://www.youtube.com/watch?v=YFl2mCHdv24
+ - Docker Compose in 12 Minutes - https://www.youtube.com/watch?v=Qw9zlE3t8Ko

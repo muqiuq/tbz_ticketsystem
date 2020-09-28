@@ -30,7 +30,7 @@ services:
     volumes:
       - ./db:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASS=securepassword
+      - MYSQL_ROOT_PASSWORD=securepassword
       - MYSQL_DATABASE=osticket
       - MYSQL_USER=osticket
       - MYSQL_PASSWORD=verysecret1234

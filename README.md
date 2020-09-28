@@ -12,7 +12,7 @@ Disclaimer: Do not use these docker-compose file in a production environment.
  - Login in Backend: http://localhost:8080/scp/login.php
  - Username: ostadmin, Password: Admin1
 
-# Install guide
+# Installation guide
 ## Windows
 :warning: **Docker Desktop for Windows uses Hyper-V which causes conflicts while running Virtual-Box simultaneously. Prefere running docker in a Virtual-Box Linux instead.**
  - Follow [this guide](https://docs.docker.com/docker-for-windows/install/) to install Docker Desktop.

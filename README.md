@@ -2,19 +2,14 @@
 
 Disclaimer: Do not use these docker-compose file in a production environment. 
 
-:warning: ** OTRS is currently broken. osTicket works fine!**
-
-# OTRS (CUrrently broken!)
- - Is based on https://github.com/complemento/docker.otrs
- - Backend Login: http://localhost:8090/otrs/
- - Username: root@localhost, Password: ligero
-
-
 # osTicket
  - Login in Backend: http://localhost:8080/scp/login.php
  - Username: ostadmin, Password: Admin1
 
-# Installation guide
+# zammad
+ - See https://docs.zammad.org/en/latest/contributing/install-docker.html
+
+# Installation guide (osticket)
 ## Windows
 :warning: **Docker Desktop for Windows uses Hyper-V which causes conflicts while running Virtual-Box simultaneously. Prefere running docker in a Virtual-Box Linux instead.**
  - Follow [this guide](https://docs.docker.com/docker-for-windows/install/) to install Docker Desktop.

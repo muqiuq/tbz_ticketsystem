@@ -9,7 +9,7 @@ Disclaimer: Do not use these docker-compose file in a production environment.
 # zammad
  - See https://docs.zammad.org/en/latest/contributing/install-docker.html
 
-# Installation guide (osticket)
+# Installation guide - osticket
 ## Windows
 :warning: **Docker Desktop for Windows uses Hyper-V which causes conflicts while running Virtual-Box simultaneously. Prefere running docker in a Virtual-Box Linux instead.**
  - Follow [this guide](https://docs.docker.com/docker-for-windows/install/) to install Docker Desktop.
@@ -28,7 +28,21 @@ docker-compose up
  - Wait until docker gets everything ready (can take up to 10 minutes).
  - Use Backend login url to access backend. 
 
-# Tips:
+# Installation tips - zammad
+ - Just enter this command to download and start a zammad container. Run the comamnd without the "-d" flag to see the output.
+```shell
+docker container run -ti -d --name zammad -p 80:80 zammad/zammad
+```
+ - You can start the stopped container using
+```shell
+docker container start zammad
+```
+ - And to stop use
+ ```shell
+ docker container stop zammad
+ ```
+
+# Docker Tips:
  - You may have to create a network proxy and service first (you'll receive a warning)
  ```shell
 docker network create proxy

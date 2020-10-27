@@ -31,6 +31,8 @@ services:
       - ./data/mysql:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=ligero
+      - MYSQL_ROOT_HOST=% 
+      - MYSQL_DATABASE=otrs_ligero
     command:
       - --max_allowed_packet=65737518
       - --innodb_log_file_size=269331648

@@ -2,7 +2,9 @@
 
 Disclaimer: Do not use these docker-compose file in a production environment. 
 
-# OTRS
+:warning: ** OTRS is currently broken. osTicket works fine!**
+
+# OTRS (CUrrently broken!)
  - Is based on https://github.com/complemento/docker.otrs
  - Backend Login: http://localhost:8090/otrs/
  - Username: root@localhost, Password: ligero
